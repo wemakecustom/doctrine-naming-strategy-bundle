@@ -1,0 +1,33 @@
+{
+    "name": "wemakecustom/doctrine-naming-strategy-bundle",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "keywords": ["Symfony", "Naming"],
+    "authors": [
+        {
+            "name": "Sébastin Lavoie",
+            "email": "github@lavoie.sl"
+        },
+        {
+            "name": "Mathieu Lemoine",
+            "email": "mathieu@wemakecustom.com"
+        }
+    ],
+    "description": "WeMakeCustom Doctrine Naming Strategy",
+    "autoload": {
+        "psr-4": { "WMC\\DoctrineNamingStrategyBundle\\": "" }
+    },
+    "require": {
+        "php": ">=5.3.3",
+        "doctrine/orm": "^2.3",
+        "doctrine/inflector": "^1.0"
+    },
+    "suggests": {
+        "symfony/framework-bundle": "To integrate with full stack Symfony"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}
