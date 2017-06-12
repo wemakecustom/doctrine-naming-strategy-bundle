@@ -18,7 +18,7 @@ The best way to install this extension is through composer:
 First, require the bundle:
 
 ```sh
-composer require wemakecustom/doctrine-naming-strategy "^1.0"
+composer require wemakecustom/doctrine-naming-strategy-bundle "^1.0"
 ```
 
 Second, enable it:
@@ -56,7 +56,7 @@ The best way to install this extension is through composer:
 First, require the bundle:
 
 ```sh
-composer require wemakecustom/doctrine-naming-strategy "^1.0"
+composer require wemakecustom/doctrine-naming-strategy-bundle "^1.0"
 ```
 
 Then give the naming strategy to doctrine's configuration:
