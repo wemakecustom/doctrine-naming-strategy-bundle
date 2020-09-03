@@ -11,7 +11,12 @@
         {
             "name": "Mathieu Lemoine",
             "email": "mathieu@wemakecustom.com"
+        },
+        {
+            "name": "Virgile Vivier",
+            "email": "virgilevivier@gmail.com"
         }
+
     ],
     "description": "WeMakeCustom Doctrine Naming Strategy",
     "autoload": {

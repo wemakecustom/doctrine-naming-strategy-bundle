@@ -3,10 +3,19 @@
 namespace WMC\DoctrineNamingStrategyBundle\ORM;
 
 use Doctrine\ORM\Mapping\UnderscoreNamingStrategy;
-use Doctrine\Common\Inflector\Inflector;
 
 class NamingStrategy extends UnderscoreNamingStrategy
 {
+    /**
+     * @var \Doctrine\Inflector\Inflector
+     */
+    static private $inflector;
+
+    public function __construct()
+    {
+        parent::__construct(null, true);
+    }
+
     /**
      * {@inheritdoc}
      */
@@ -17,10 +26,23 @@ class NamingStrategy extends UnderscoreNamingStrategy
         $parts = explode('_', $table_name);
         $last = array_pop($parts);
 
-        $last = Inflector::pluralize($last);
+        $last = $this->pluralize($last);
         $parts[] = $last;
 
         return implode('_', $parts);
+    }
+
+    private function pluralize($toPluralize)
+    {
+        if (class_exists('\Doctrine\Inflector\InflectorFactory')) {
+            if (!static::$inflector) {
+                static::$inflector = \Doctrine\Inflector\InflectorFactory::create()->build();
+            }
+
+            return static::$inflector->pluralize($toPluralize);
+        } else {
+            return \Doctrine\Common\Inflector\Inflector::pluralize($toPluralize);
+        }
     }
 
     /**
