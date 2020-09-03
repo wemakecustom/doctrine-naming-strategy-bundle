@@ -19,7 +19,7 @@
     },
     "require": {
         "php": ">=5.3.3",
-        "doctrine/orm": "^2.3",
+        "doctrine/orm": "^2.3 || ^3.0",
         "doctrine/inflector": "^1.0"
     },
     "suggests": {

@@ -7,6 +7,11 @@ use Doctrine\Common\Inflector\Inflector;
 
 class NamingStrategy extends UnderscoreNamingStrategy
 {
+    public function __construct()
+    {
+        parent::__construct(null, true);
+    }
+
     /**
      * {@inheritdoc}
      */
