@@ -27,7 +27,7 @@
         "doctrine/orm": "^2.3",
         "doctrine/inflector": "^1.0"
     },
-    "suggests": {
+    "suggest": {
         "symfony/framework-bundle": "To integrate with full stack Symfony"
     },
     "extra": {

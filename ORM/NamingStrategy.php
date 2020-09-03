@@ -11,11 +11,6 @@ class NamingStrategy extends UnderscoreNamingStrategy
      */
     static private $inflector;
 
-    public function __construct()
-    {
-        parent::__construct(null, true);
-    }
-
     /**
      * {@inheritdoc}
      */
