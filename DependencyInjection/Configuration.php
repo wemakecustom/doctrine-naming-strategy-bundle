@@ -9,8 +9,7 @@ class Configuration implements ConfigurationInterface
 {
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('wmc_doctrine_naming_strategy');
+        $treeBuilder = new TreeBuilder('wmc_doctrine_naming_strategy');
 
         return $treeBuilder;
     }
